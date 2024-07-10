@@ -1,0 +1,104 @@
+.Header {
+  //   background-color: tomato;
+  // background-color: hsl(210, 3%, 15%);
+  border-radius: 10px;
+  background-color: #282a37;
+  filter: drop-shadow(5px 5px 10px black);
+  color: white;
+  display: flex;
+  // width: calc(100% - 20px);
+  padding-left: 10px;
+  padding-right: 10px;
+  position: sticky;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  top: 10px;
+  // width: 100%;
+
+  h3 {
+    cursor: pointer;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .header-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 30px;
+
+    .settings {
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 20px;
+      &:hover {
+        cursor: pointer;
+      }
+
+      .chat-icon {
+        padding-top: 10px;
+        &:hover {
+          color: #1d90f4;
+          transition: all 0.1s ease-in;
+        }
+      }
+
+      .accounts {
+        display: flex;
+        align-items: center;
+        transition: all 0.1s ease-in;
+        &:hover {
+          color: #1d90f4;
+          cursor: pointer;
+        }
+
+        p {
+          cursor: pointer;
+          // margin-left: 20px;
+        }
+      }
+      .dropdown-content {
+        position: absolute;
+        width: 100%;
+        right: 10px;
+        top: 50px;
+        text-align: start;
+        background-color: hsl(210, 3%, 15%);
+        color: #e4e6eb;
+        min-width: 300px;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding: 10px;
+        z-index: 30;
+
+        .each-option {
+          border-radius: 5px;
+          padding-left: 5px;
+          padding-right: 5px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0;
+          padding-top: 0;
+          height: 50px;
+          transition: all;
+          transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          transition-delay: 25ms;
+          &:hover {
+            background-color: #1d90f4;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

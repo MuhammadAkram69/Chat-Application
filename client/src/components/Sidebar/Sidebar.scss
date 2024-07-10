@@ -1,0 +1,118 @@
+.sidebar-container {
+  position: sticky !important;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  border-radius: 15px;
+  // border: 1px #808080 solid;
+  transition: all 0.3s ease;
+  background-color: #282a37;
+  filter: drop-shadow(5px 5px 10px black);
+  z-index: 100;
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+    height: auto;
+    padding: 0px 10px;
+    // top: calc(710px - 80px);
+    padding: 0;
+  }
+
+  @media (min-width: 901px) {
+    top: 100px !important;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 100%;
+    &:hover {
+      cursor: pointer;
+      color: gray;
+    }
+  }
+
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px gray solid;
+    transition: all 0.3s ease;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+
+    img {
+      max-width: 100px;
+      border-radius: 100%;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+    p {
+      margin: 5px;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+    .link {
+      font-size: 12px;
+      color: #1d90f4;
+    }
+  }
+
+  .sidebar-content-container {
+    margin-top: 20px;
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 10px 0px;
+    }
+  }
+  .bg-blue {
+    background-color: #1d90f4;
+    // filter: drop-shadow(2px 2px 5px black);
+  }
+
+  .onSideBarOpen {
+    justify-content: center;
+  }
+  .sidebar-content {
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+    height: 50px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    @media (max-width: 900px) {
+      padding: 0px 10px;
+    }
+
+    p {
+      margin-left: 20px;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+    &:hover {
+      // background-color: #eceef1;
+      background-color: #1d90f4;
+      cursor: pointer;
+    }
+  }
+}
