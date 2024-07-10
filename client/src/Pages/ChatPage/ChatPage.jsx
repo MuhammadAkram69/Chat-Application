@@ -63,7 +63,7 @@ const ChatPage = () => {
     };
   }, [search]);
 
- 
+
 
   const showOnlinePeople = (people) => {
     setOnlinePeople(people.online);
@@ -71,7 +71,7 @@ const ChatPage = () => {
 
   const handleMessage = (e) => {
     const messageData = JSON.parse(e.data);
-    console.log({messageData});
+    console.log({ messageData });
     if ("online" in messageData) {
       showOnlinePeople(messageData);
     } else {
@@ -135,6 +135,9 @@ const ChatPage = () => {
         }
       };
       getMessagesFromDb();
+      const interval = setInterval(getMessagesFromDb, 3000);
+      // Clear interval on component unmount or when selectedContact changes
+      return () => clearInterval(interval);
     }
   }, [selectedContact]);
 
