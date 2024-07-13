@@ -15,7 +15,6 @@ const passwordOptions = {
   excludeSimilarCharacters: true,
 };
 
-// Signup controller
 authControllers.SignUp = async (req, res) => {
   try {
     console.log("request body", req.body)
